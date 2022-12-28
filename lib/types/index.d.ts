@@ -10,6 +10,8 @@ export interface Tool {
 
 export interface ToolsState {
   tools: Tool[] | [];
+  tagOnly: boolean;
+  handlerTagOnly: (checked: boolean) => void;
   addTool: (tool: Tool) => Promise<void>;
   removeTool: (id: number) => Promise<void>;
   fetchTools: () => Promise<void>;
