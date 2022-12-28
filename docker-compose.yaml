@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  app:
+    container_name: app
+    build: ./
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    depends_on:
+      - dbjson
+    restart: always
+  dbjson: 
+    container_name: dbjson
+    build: ./vuttr-api
+    ports:
+      - 3001:3001
+    volumes:
+      - ./db.json:/app/db.json
+    restart: always    
