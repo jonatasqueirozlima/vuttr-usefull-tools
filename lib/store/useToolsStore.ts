@@ -3,6 +3,9 @@ import create from 'zustand';
 
 const useToolsStore = create<ToolsState>((set) => ({
   tools: [],
+  tagOnly: false,
+  handlerTagOnly: (checked: boolean) =>
+    set((state) => ({ ...state, tagOnly: checked })),
   addTool: async (tool) => {
     const response = await fetch('http://localhost:3000/tools', {
       method: 'POST',
