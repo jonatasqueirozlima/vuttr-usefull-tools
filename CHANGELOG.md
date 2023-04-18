@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dashartt/vuttr-usefull-tools/compare/v1.0.0...v1.1.0) (2023-04-18)
+
+
+### Features
+
+* :sparkles: add json server support for vercel ([b6a65e7](https://github.com/dashartt/vuttr-usefull-tools/commit/b6a65e79d16fd6eacbf531f1e5da85a96a2edbe6))
+
 # 1.0.0 (2022-12-30)
 
 
