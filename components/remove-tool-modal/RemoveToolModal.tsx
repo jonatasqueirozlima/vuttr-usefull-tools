@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Button,
@@ -10,10 +10,10 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-} from '@chakra-ui/react';
-import useToolsStore from 'lib/store/useToolsStore';
-import type { Tool } from 'lib/types';
-import { AiOutlinePlus } from 'react-icons/ai';
+} from "@chakra-ui/react";
+import useToolsStore from "lib/store/useToolsStore";
+import type { Tool } from "lib/types";
+import { AiOutlinePlus } from "react-icons/ai";
 
 type Props = {
   isOpen: boolean;

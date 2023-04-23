@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import RemoveToolButton from 'components/remove-tool-modal/RemoveToolButton';
-import type { Tool } from 'lib/types';
-import Link from 'next/link';
+import RemoveToolButton from "components/remove-tool-modal/RemoveToolButton";
+import type { Tool } from "lib/types";
+import Link from "next/link";
 
 type Props = {
   tool: Tool;
@@ -13,7 +13,7 @@ export default function ToolCard({ tool }: Props) {
     <article className="flex flex-col space-y-2 border-[3px] border-black bg-white p-4">
       <section className="mb-2 flex justify-between">
         <Link
-          href={tool?.link || '#'}
+          href={tool?.link || "#"}
           className="font-bold text-blue-600 underline"
         >
           {tool.title}

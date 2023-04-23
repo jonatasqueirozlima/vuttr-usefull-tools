@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import NoToolsFound from './NoToolsFound';
-import ToolsList from './ToolsList';
+import NoToolsFound from "./NoToolsFound";
+import ToolsList from "./ToolsList";
 
 export default function ToolsContainer() {
   return (

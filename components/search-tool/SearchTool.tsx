@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import SearchByText from './SearchByText';
-import TagOnlyCheckbox from './TagOnlyCheckbox';
+import SearchByText from "./SearchByText";
+import TagOnlyCheckbox from "./TagOnlyCheckbox";
 
 export default function SearchTool() {
   return (

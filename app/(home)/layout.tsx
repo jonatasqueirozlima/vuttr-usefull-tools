@@ -1,6 +1,6 @@
-import '../globals.css';
+import "../globals.css";
 
-import ChakraWrapper from 'lib/providers/ChakraWrapper';
+import ChakraWrapper from "lib/providers/ChakraWrapper";
 
 export default function RootLayout({
   children,

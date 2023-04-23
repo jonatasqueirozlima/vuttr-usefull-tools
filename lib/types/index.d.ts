@@ -1,4 +1,4 @@
-import type toolSchema from 'lib/schemas/toolSchema';
+import type toolSchema from "lib/schemas/toolSchema";
 
 export interface Tool {
   id?: number;

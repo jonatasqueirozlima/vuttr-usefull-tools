@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import useToolsStore from 'lib/store/useToolsStore';
-import type { ChangeEventHandler } from 'react';
+import useToolsStore from "lib/store/useToolsStore";
+import type { ChangeEventHandler } from "react";
 
 export default function TagOnlyCheckbox() {
   const { handlerTagOnly } = useToolsStore();

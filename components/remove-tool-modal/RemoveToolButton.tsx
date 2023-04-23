@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useDisclosure } from '@chakra-ui/react';
-import type { Tool } from 'lib/types';
-import { GrFormClose } from 'react-icons/gr';
+import { useDisclosure } from "@chakra-ui/react";
+import type { Tool } from "lib/types";
+import { GrFormClose } from "react-icons/gr";
 
-import RemoveToolModal from './RemoveToolModal';
+import RemoveToolModal from "./RemoveToolModal";
 
 type Props = {
   tool: Tool;

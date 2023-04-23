@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import useToolsStore from 'lib/store/useToolsStore';
-import type { ChangeEventHandler } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import useToolsStore from "lib/store/useToolsStore";
+import type { ChangeEventHandler } from "react";
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchByText() {
   const { getByTextTool, fetchTools, getByTagTool, tagOnly } = useToolsStore();
@@ -10,9 +10,9 @@ export default function SearchByText() {
   const searchWhileTyping: ChangeEventHandler<HTMLInputElement> = ({
     target,
   }) => {
-    if (target.value !== '' && tagOnly) {
+    if (target.value !== "" && tagOnly) {
       getByTagTool(target.value);
-    } else if (target.value !== '' && !tagOnly) {
+    } else if (target.value !== "" && !tagOnly) {
       getByTextTool(target.value);
     } else {
       fetchTools();

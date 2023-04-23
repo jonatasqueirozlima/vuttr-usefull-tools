@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Modal,
@@ -7,9 +7,9 @@ import {
   ModalContent,
   ModalHeader,
   ModalOverlay,
-} from '@chakra-ui/react';
-import AddToolForm from 'components/add-tool-form/AddToolForm';
-import { AiOutlinePlus } from 'react-icons/ai';
+} from "@chakra-ui/react";
+import AddToolForm from "components/add-tool-form/AddToolForm";
+import { AiOutlinePlus } from "react-icons/ai";
 
 type Props = {
   isOpen: boolean;

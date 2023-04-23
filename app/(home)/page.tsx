@@ -1,6 +1,6 @@
-import AddToolButton from 'components/add-tool-modal/AddToolButton';
-import SearchTool from 'components/search-tool/SearchTool';
-import ToolsList from 'components/tools-list/ToolsList';
+import AddToolButton from "components/add-tool-modal/AddToolButton";
+import SearchTool from "components/search-tool/SearchTool";
+import ToolsList from "components/tools-list/ToolsList";
 
 export default async function Page() {
   return (

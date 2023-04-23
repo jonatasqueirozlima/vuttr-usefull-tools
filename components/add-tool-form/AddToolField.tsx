@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { FormControl, FormLabel, Input, Textarea } from '@chakra-ui/react';
-import type { ToolSchema } from 'lib/types';
-import type { FieldErrorsImpl, UseFormRegister } from 'react-hook-form';
+import { FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
+import type { ToolSchema } from "lib/types";
+import type { FieldErrorsImpl, UseFormRegister } from "react-hook-form";
 
 type Props = {
-  type: 'input' | 'textarea';
+  type: "input" | "textarea";
   errors: Partial<FieldErrorsImpl<ToolSchema>>;
   label: string;
-  id: 'title' | 'link' | 'description' | 'tags';
+  id: "title" | "link" | "description" | "tags";
   register: UseFormRegister<ToolSchema>;
 };
 
@@ -17,14 +17,14 @@ export default function AddToolInput({
   label,
   id,
   errors,
-  type = 'input',
+  type = "input",
 }: Props) {
   return (
     <FormControl isInvalid={!!errors[id]} className="-space-y-2">
       <FormLabel htmlFor={id} className="font-bold">
         {label}
       </FormLabel>
-      {type === 'input' ? (
+      {type === "input" ? (
         <Input
           className="rounded-none border-[3px] border-black"
           id={id}

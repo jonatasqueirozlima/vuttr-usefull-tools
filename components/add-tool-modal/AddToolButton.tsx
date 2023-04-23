@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useDisclosure } from '@chakra-ui/react';
-import { AiOutlinePlus } from 'react-icons/ai';
+import { useDisclosure } from "@chakra-ui/react";
+import { AiOutlinePlus } from "react-icons/ai";
 
-import AddToolModal from './AddToolModal';
+import AddToolModal from "./AddToolModal";
 
 export default function AddToolButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
