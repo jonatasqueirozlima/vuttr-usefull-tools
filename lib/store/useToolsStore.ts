@@ -35,7 +35,6 @@ const useToolsStore = create<ToolsState>((set) => ({
     });
 
     const data = (await response.json()) as Tool[];
-    console.log(response);
 
     set({ tools: data });
   },
