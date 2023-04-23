@@ -1,5 +1,10 @@
-import type { Tool, ToolsState } from 'lib/types';
-import create from 'zustand';
+import type { Tool, ToolsState } from "lib/types";
+import create from "zustand";
+
+const API_URL = "https://vuttr-api-server.vercel.app";
+const headers = {
+  "Content-Type": "application/json",
+};
 
 const useToolsStore = create<ToolsState>((set) => ({
   tools: [],
@@ -7,55 +12,46 @@ const useToolsStore = create<ToolsState>((set) => ({
   handlerTagOnly: (checked: boolean) =>
     set((state) => ({ ...state, tagOnly: checked })),
   addTool: async (tool) => {
-    const response = await fetch('http://0.0.0.0:3001/tools', {
-      method: 'POST',
+    const response = await fetch(`${API_URL}/tools`, {
+      method: "POST",
       body: JSON.stringify(tool),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      ...headers,
     });
     const data = (await response.json()) as Tool;
 
     set((state) => ({ tools: [...state.tools, data] }));
   },
   removeTool: async (id: number) => {
-    await fetch(`http://0.0.0.0:3001/tools/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    await fetch(`${API_URL}/tools/${id}`, {
+      method: "DELETE",
+      ...headers,
     });
     set((state) => ({ tools: state.tools.filter((tool) => tool.id !== id) }));
   },
   fetchTools: async () => {
-    const response = await fetch('http://0.0.0.0:3001/tools', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const response = await fetch(`${API_URL}/tools`, {
+      method: "GET",
+      ...headers,
     });
+
     const data = (await response.json()) as Tool[];
-    console.log(data);
+    console.log(response);
 
     set({ tools: data });
   },
   getByTextTool: async (text: string) => {
-    const response = await fetch(`http://0.0.0.0:3001/tools?q=${text}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const response = await fetch(`${API_URL}/tools?q=${text}`, {
+      method: "GET",
+      ...headers,
     });
     const data = (await response.json()) as Tool[];
 
     set({ tools: data });
   },
   getByTagTool: async (tag: string) => {
-    const response = await fetch(`http://0.0.0.0:3001/tools?tags_like=${tag}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const response = await fetch(`${API_URL}/tools?tags_like=${tag}`, {
+      method: "GET",
+      ...headers,
     });
     const data = (await response.json()) as Tool[];
 
