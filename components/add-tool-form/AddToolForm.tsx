@@ -66,10 +66,7 @@ export default function AddToolForm({ onCloseModal }: Props) {
         id="tags"
       />
 
-      <Button
-        type="submit"
-        className="self-end rounded-none border-[3px] border-black"
-      >
+      <Button type="submit" className="self-end  border-[3px] border-black">
         Add tool
       </Button>
     </form>

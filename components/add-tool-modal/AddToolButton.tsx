@@ -12,7 +12,7 @@ export default function AddToolButton() {
     <>
       <button
         onClick={onOpen}
-        className="mt-2 flex h-fit items-center space-x-2 self-center border-[3px] border-black bg-white p-[8px]"
+        className="rounded-md mt-2 flex h-fit items-center space-x-2 self-center border-[3px] border-black bg-white p-[8px]"
       >
         <AiOutlinePlus />
         <span>Add</span>

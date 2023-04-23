@@ -10,7 +10,7 @@ type Props = {
 
 export default function ToolCard({ tool }: Props) {
   return (
-    <article className="flex flex-col space-y-2 border-[3px] border-black bg-white p-4">
+    <article className="flex flex-col space-y-2 border-[3px] border-black bg-white p-4 rounded-md">
       <section className="mb-2 flex justify-between">
         <Link
           href={tool?.link || "#"}

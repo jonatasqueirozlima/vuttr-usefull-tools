@@ -20,14 +20,14 @@ export default function SearchByText() {
   };
 
   return (
-    <section className="flex items-center border-[3px] border-black bg-white p-2">
+    <section className="flex items-center border-[3px] border-black bg-white p-2 rounded-md">
       <label htmlFor="search" className="flex items-center space-x-2">
         <FaSearch />
         <input
           onChange={searchWhileTyping}
           id="search"
           placeholder="search"
-          className="w-[150px] focus-visible:outline-none"
+          className="w-[150px] md:w-full focus-visible:outline-none"
         />
       </label>
     </section>

@@ -26,16 +26,14 @@ export default function AddToolInput({
       </FormLabel>
       {type === "input" ? (
         <Input
-          className="rounded-none border-[3px] border-black"
+          className="border-[3px] border-black focus-visible:border-gray-200 focus-visible:shadow-none"
           id={id}
-          placeholder="..."
           {...register(id)}
         />
       ) : (
         <Textarea
-          className="max-h-[200px] rounded-none border-[3px] border-black"
+          className="max-h-[200px] border-[3px] border-black"
           id={id}
-          placeholder="..."
           {...register(id)}
         />
       )}
